@@ -1,8 +1,21 @@
 <html>
     <head>
         <title>CORS test</title>
+        <script type="application/javascript">
+            "strict";
+            function do_some_cors() {
+                const src = document.forms.form1.some_text.value;
+                const script = document.createElement('script');
+                script.src = src;
+                document.head.appendChild(script);
+            }
+        </script>
     </head>
     <body>
         <h1>CORS test</h1>
+        <form id="form1">
+            Script URL: <input id="some_text" name="some_text" type="text" value="https://www.google.com/" /><br />
+            <input type="button" value="INJECT ME" onclick="do_some_cors()" />
+        </form>
     </body>
 </html>

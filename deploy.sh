@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -e
+set -x
 
 # this script assume:
 # 1. you are running in the Google Cloud Shell
