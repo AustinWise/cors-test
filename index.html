@@ -9,6 +9,10 @@
                 script.src = src;
                 document.head.appendChild(script);
             }
+
+            function jsonp_callback(stuff) {
+                alert(JSON.stringify(stuff));
+            }
         </script>
     </head>
     <body>
